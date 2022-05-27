@@ -1,0 +1,299 @@
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --step--2: clamp(0.91rem, calc(0.89rem + 0.1vw), 0.96rem);
+  --step--1: clamp(1.09rem, calc(1.05rem + 0.21vw), 1.2rem);
+  --step-0: clamp(1.31rem, calc(1.24rem + 0.37vw), 1.5rem);
+  --step-1: clamp(1.58rem, calc(1.46rem + 0.59vw), 1.88rem);
+  --step-2: clamp(1.89rem, calc(1.71rem + 0.89vw), 2.34rem);
+  --step-3: clamp(2.27rem, calc(2.01rem + 1.29vw), 2.93rem);
+  --step-4: clamp(2.72rem, calc(2.36rem + 1.83vw), 3.66rem);
+  --step-5: clamp(3.27rem, calc(2.75rem + 2.56vw), 4.58rem);
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
+  color: whitesmoke;
+}
+
+html::-webkit-scrollbar {width: 0px}
+
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #111519;
+  scrollbar-width:0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: var(--step--1);
+}
+
+.tag {
+  color: yellow;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: var(--step--2);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.tagline {
+  width: 40px;
+  height: 2px;
+  background-color: yellow;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.hero-background {
+  background-image: linear-gradient(to bottom, transparent 0% 80%, #111519),
+    linear-gradient(to right, #0005, #0002), url("http://imgfz.com/i/JnmaZsf.png");
+  background-size: cover;
+  background-position: right;
+  text-align: left;
+  padding: 1rem;
+  height: 120vh;
+}
+
+.hero-background h1 {
+  margin: 0;
+  font-size: var(--step-5);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.link button {
+  width: auto;
+  padding: 0.6rem;
+  font-weight: bold;
+  color: yellow;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: none;
+  font-size: var(--step--2);
+}
+
+i {
+  margin-right: 0.5rem;
+  color: yellow;
+}
+
+.card-contain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:3rem 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap:5%;
+}
+
+.card-img img {
+  width: none;
+  height: none;
+  object-fit: none;
+}
+
+.bg-number {
+  color: #ddd1;
+  position: absolute;
+  font-size: 15rem;
+  font-weight: unset;
+  opacity: 0.6;
+  transform: translate(-45%, -40%);
+  z-index:-2;
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--step-3);
+}
+
+p {
+  line-height: 1.6;
+  font-size: var(--step--2);
+}
+
+h4,
+h3 {
+  font-size: var(--step--1);
+  margin: 0.5rem 0;
+}
+h4 {
+  color: #ddd5;
+}
+
+li {
+  font-size: var(--step--2);
+}
+
+figure {
+  margin: 1rem;
+}
+
+footer .more-section button {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+  background-color: yellow;
+  color: #111519;
+  border: none;
+  font-weight: 900;
+  align-items: baseline;
+  cursor: pointer;
+  margin: 2rem 0;
+}
+
+.more-section h3 {
+  font-weight: 300;
+}
+
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+footer .about-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .about-section li {
+  margin: 0.5rem 0;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-background {
+    background-image: linear-gradient(to bottom, transparent 0% 80%, #111519),
+      linear-gradient(to right, #0005, #0002), url("http://imgfz.com/i/LW86gwn.png");
+    background-size: cover;
+    background-position: right;
+    text-align: left;
+    padding: 1rem;
+    height: 120vh;
+  }
+
+  .card-contain{padding:0 5%}
+
+  img {
+    width: 480px;
+    object-fit: cover;
+    height: 100vh;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .card {flex-direction: row;margin:0rem 0;justify-content: center;gap:3rem;}
+
+  .reverse {flex-direction: row-reverse;}
+  .reverse img {object-position: left;}
+
+  .card-contextual p,
+  .reverse p {
+    width: 300px;
+  }
+
+  footer{margin:2rem ;display:flex;flex-direction: row;align-items: center;}
+
+  footer figure{width: 50%;}
+}
+
+@media screen and (min-width:700px){
+  .card-contain{padding:0 5%}
+
+}
+
+
+
+
+@keyframes FadeOut{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+
+.loading{
+  position: fixed;
+  z-index: 2;
+  background-color:#111519;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation: FadeOut .4s 1s ease both ;
+  pointer-events:none;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
